@@ -1,0 +1,241 @@
+//====================================================================================================
+.hello {
+
+  padding-top: 38px;
+  padding-bottom: 70px;
+
+  @media (max-width:$md1+px) {
+    padding-top: 0;
+  }
+
+  @media (max-width:$md3+px) {
+    padding-bottom: 60px;
+  }
+
+  // .hello__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $md3+px) {
+      text-align: center;
+      flex-direction: column-reverse;
+    }
+
+  }
+
+  // .hello__content
+  &__content {
+    align-items: flex-start;
+    flex: 1 1 auto;
+    padding-right: 110px;
+    padding-top: 18px;
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width:$md1+px) {
+      padding-right: 50px;
+    }
+
+    @media (max-width: $md3+px) {
+      padding: 0px 0px 0px 0px;
+    }
+  }
+
+  // .hello__title
+  &__title {
+    margin-bottom: 25px;
+
+    @media (max-width: $md3+px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .hello__text
+  &__text {
+    margin-bottom: 35px;
+
+    @media (max-width: $md3+px) {
+      padding: 0 15px;
+      margin-bottom: 25px;
+    }
+  }
+
+  // .hello__btn
+  &__btn {
+    margin-bottom: 25px;
+
+    @media (max-width: $md3+px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .hello__avatar
+  &__avatar {
+    flex: 0 0 243px;
+    height: 243px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: -5px 13px 0px 0px #EDF7FA;
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width: $md3+px) {
+      align-self: center;
+      max-width: 170px;
+      max-height: 170px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+//====================================================================================================
+
+.recent-posts {
+  background: #EDF7FA;
+  padding: 25px 0 13px 0;
+
+  @media (max-width: $md3+px) {
+    padding-bottom: 23px;
+  }
+
+  // .recent-posts__container
+  &__container {}
+
+  // .recent-posts__header
+  &__header {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  // .recent-posts__title
+  &__title {
+    flex: 1 1 auto;
+    padding-right: 20px;
+  }
+
+  // .recent-posts__viewall
+  &__viewall {
+    font-size: 16px;
+    line-height: 23px;
+    color: #00A8CC;
+    //white-space: nowrap;
+    flex: 0 0 auto;
+
+    @media (max-width: $md3+px) {
+      display: none;
+    }
+  }
+
+  // .recent-posts__items
+  &__items {
+    margin: 0 -10px;
+
+    @media (min-width: $md3+px) {
+      display: flex;
+
+    }
+  }
+
+  // .recent-posts__column
+  &__column {
+    flex: 0 1 50%;
+    padding: 0 10px;
+    margin-bottom: 17px;
+  }
+
+  // .recent-posts__item
+  &__item {}
+}
+
+.recent-post {
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
+  border-radius: 4px;
+  padding: 20px;
+
+  @media (max-width: $md3+px) {
+    padding: 15px;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  // .recent-post__title
+  &__title {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 38 / 26 * 100%;
+    color: inherit;
+    transition: color 0.3s ease 0s;
+    margin-bottom: 17px;
+
+    &:hover {
+      color: #FF6464;
+    }
+
+    @media (max-width: $md3+px) {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+  }
+
+  // .recent-post__info
+  &__info {
+    font-size: 18px;
+    line-height: 26 / 18 * 100%;
+    margin-bottom: 15px;
+
+    span {
+      margin: 0 10px;
+    }
+
+    @media (max-width: $md3+px) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  // .recent-post__text
+  &__text {
+    margin-bottom: 15px;
+  }
+}
+
+//===============================================
+
+.featured-works {
+  padding: 30px 0px 80px 0px;
+
+  @media (max-width: $md3+px) {
+    padding-bottom: 30px;
+  }
+
+  // .featured-works__container
+  &__container {}
+
+  // .featured-works__title
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    @media (max-width: $md3+px) {
+      display: flex;
+      overflow: auto;
+
+      .works__item {
+        flex: 0 0 90%;
+        margin-right: 15px;
+      }
+    }
+  }
+}
